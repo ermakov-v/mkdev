@@ -1,22 +1,15 @@
-for arg in ARGV
-end
+arg = ARGV[0] #присваиваем переменной первое значение массива ARGV
 
-goodAnswer 	= 	' is a good movie'
-badAnswer 	= 	' is a bad movie'
-
-goodFilm 	= [	'Matrix', 'Matrix2', 'Matrix3' ]
-badFilm		= 	'Titanik'
-
-notSeen = 'Haven\'t seen ' + arg + ' yet' 
+goodAnswer =  ' is a good movie'
+badAnswer  =  ' is a bad movie'
+goodFilm   = ['Matrix', 'Matrix2', 'Matrix3'] #массив хороших фильмов
+badFilm	   = ['Titanik'			    ] #массив плохих фильмов
+notSeen	   =  "Haven\'t seen #{arg} yet"
 			
 if goodFilm.include?(arg)
 	puts arg + goodAnswer
-end
-
-if arg == badFilm
+elsif badFilm.include?(arg)
 	puts arg + badAnswer
-end
-
-if not (goodFilm.include?(arg)) and arg != badFilm
+else not (goodFilm.include?(arg)) and not (badFilm.include?(arg))
 	puts notSeen
 end
