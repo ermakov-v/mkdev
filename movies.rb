@@ -10,6 +10,5 @@ if goodFilm.include?(arg)
 	puts arg + goodAnswer
 elsif badFilm.include?(arg)
 	puts arg + badAnswer
-else not (goodFilm.include?(arg)) and not (badFilm.include?(arg))
-	puts notSeen
+else puts notSeen
 end
